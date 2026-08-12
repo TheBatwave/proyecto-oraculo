@@ -1,4 +1,9 @@
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
 
 body {
   background-color: rgb(50, 56, 56);
@@ -7,4 +12,83 @@ body {
 
 .titulo {
   color: rgb(20, 195, 180);
+}
+
+
+.sidebar {
+  background-color: rgb(180, 185, 46);
+}
+.menu {
+  background-color: orange;
+}
+
+main {
+  background-color: rgb(125, 37, 125);
+}
+
+header {
+  background-color: rgb(236, 68, 68);
+}
+
+section {
+  background-color: cadetblue;
+}
+
+/* 1. Contenedor Principal */
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+  background-color: #0b141a;
+}
+
+/* 2. Menú Lateral */
+.sidebar {
+  width: 160px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu ul {
+  list-style: none;
+  margin-top: 20px;
+}
+
+.menu li{
+  padding: 12px 25px;
+  margin-bottom: 5px;
+  border-radius: 8px;
+}
+
+.menu li.active {
+  background-color: #1c2b33;
+}
+
+.menu a {
+  color: #a0aec0;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.menu li.active a {
+  color: white;
+}
+
+
+/* 3. El Contenedor Principal */
+.main-content {
+  flex: 1; /* Toma todo el ancho que sobra */
+  padding: 30px;
+}
+
+
+.prueba {
+  border-radius: 8px;
+  padding: 8px;
+  margin: 8px;
+  border: none;
+  background-color: orangered;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
 }
