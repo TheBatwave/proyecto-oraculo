@@ -16,22 +16,22 @@ body {
 
 
 .sidebar {
-  background-color: rgb(180, 185, 46);
+  background-color: rgba(180, 185, 46, 0.2);
 }
 .menu {
-  background-color: orange;
+  background-color: rgba(255, 165, 0, 0.5);
 }
 
 main {
-  background-color: rgb(125, 37, 125);
+  background-color: rgba(125, 37, 125, 0.2);
 }
 
 header {
-  background-color: rgb(236, 68, 68);
+  background-color: rgba(236, 68, 68, 0.3);
 }
 
 section {
-  background-color: cadetblue;
+  background-color: rgba(95, 158, 160, 0.3);
 }
 
 /* 1. Contenedor Principal */
@@ -82,13 +82,14 @@ section {
 }
 
 
-.prueba {
+#btn-prueba {
   border-radius: 8px;
-  padding: 8px;
+  padding:10px;
   margin: 8px;
   border: none;
-  background-color: orangered;
+  background-color: rgba(255, 68, 0, 0.3);
   color: white;
   font-weight: bold;
   font-size: 20px;
+  cursor: pointer;
 }

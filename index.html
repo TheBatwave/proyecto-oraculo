@@ -6,11 +6,13 @@
   <link rel="stylesheet" href="style.css">
   <title>Oraculo</title>
 </head>
+
 <body>
   <h1 class="titulo">Bienvenidos a ORACULO</h1>
   <h2>Lista de cosas que hacer en las vacaciones</h2>
   
   <div class="app-layout">
+  <!-- ----------------------------------------------------------------- -->
     <aside class="sidebar">
       <div class="logo">
           <img src="img/Batman Lego.jpeg" alt="" width="50">
@@ -18,15 +20,18 @@
       </div>
       <nav class="menu">
         <ul>
-          <li class="active"><a href="#">Inicio</a></li>
-          <li><a href="#">Por definir</a></li>
-          <li><a href="#">Por definir</a></li>
+          <li class="item-menu active" data-url="vistas/inicio.html">Inicio</li>
+          <li class="item-menu" data-url="vistas/objetivos.html">Objetivos</li>
+          <li class="item-menu" data-url="vistas/proyectos.html">Proyectos</li>
+          <li class="item-menu" data-url="vistas/seguimiento.html">Seguimiento</li>
+          <li class="item-menu" data-url="vistas/arbol.html">Árbol</li>
+          <li class="item-menu" data-url="vistas/perfilPersonal.html">Perfil Personal</li>
         </ul>
-        <button class="prueba" onclick="accionamiento">Prueba</button>
+        <button id="btn-prueba">Prueba</button>
       </nav>
     </aside>
-
-    <main class="main-content">s
+  <!-- -------------------------------------------------------------- -->
+    <main class="main-content">
       <header>
         <input type="text" placeholder="Que quieres aprender?">
       </header>
@@ -35,99 +40,26 @@
         <p>Tienes objetivos por completar</p>
       </section>
 
-
-
-
-
-        <div class="bat"></div>
-        <h4>Organización</h4> 
+    </main>
         <!--
         * Información resaltada
         ! Método obsoleto, no lo uses
         ? Dudas
         TODO: no se que es este en realidad 
           @param my param
+
+
+          <tipo de cambio> : descripcion corta
+            feat: nuevas funcionalidades
+            fix: correccion de bug
+            docs: cambios de documentacion
+            style: cambios de formato
+            refactor: cambios de codigo (no agrega funcionalidades ni arregla bugs)
+            perf: mejoras de rendimientos
+            test: agregar o corregir test
+      
         -->
       
-        <ul>
-          <li>Opera</li>
-          <li>Fotos del Celular</li>
-          <li>Obsidian</li>
-          <li>Pinterest</li>
-          <li>Instagram</li>
-          <li>Face</li>
-          <li>TikTok</li>
-          <li>Conocimiento de Programación</li>
-          <ul>
-            <li>Papeles de Escritorio</li>
-            <li>Diapositivas de eafranco</li>
-            <li>Cosas de Intagram</li>
-          </ul>
-        </ul>
-        <h5>Proyectos de Programación</h5>
-        <ul>
-          <li>Principiante</li>
-          <ul>
-            <li>Calculadora</li>
-            <li>Reloj Digital</li>
-            <li>Barra Lateral</li>
-            <li>Quiz</li>
-            <li>To do list</li>
-            <li>Autentificacion de usuario</li>
-          </ul>
-          <li>Medio</li>
-          <ul>
-            <li>Carrito de compras</li>
-            <li>Sitio Web de Meditación</li>
-            <li>Teclado Virtual</li>
-            <li>Patron de Desbloqueo</li>
-            <li>Controlador de Gastos</li>
-            <li>Juego en la Web</li>
-          </ul>
-          <li>Avanzado</li>
-          <ul>
-            <li>Clon de Youtube</li>
-            <li>Clon de Amazon</li>
-            <li>Juego Multijugador</li>
-            <li>Clon de Unsplash</li>
-            <li>Red Social</li>
-            <li>CMS</li>
-          </ul>
-        </ul>
-        <h4>Cursos</h4>
-        <ul>
-          <li>HTML Curso Completo</li>
-        </ul>
-      
-      
-        <h4>Proyectos</h4>
-        <ul>
-          <li>SuperMega Proyecto llamado "por definir"</li>
-          <li>Proyecto Odin</li>
-          <li>LeetCode</li>
-          <li>Codeforces</li>
-          <li>CSSBattle</li>
-        </ul>
-      
-        <h4>Cosas que quiero hacer</h4>
-        <ul>
-          <li>Hacer el Horario bonito</li>
-          <li>Averiguar como funciona Paypal</li>
-          <li>Como resguardar mejor mis cuentas</li>
-          <ul>
-            <li>
-              Cambiar todo a tokens y aplicaciones de autentificación, guardar información de las cuentas y para que las uso:)
-            </li>
-          </ul>
-      
-        </ul>
-
-
-    </main>
-  </div>
-
-  
-
 <script src="script.js"></script>
 </body>
 </html>
