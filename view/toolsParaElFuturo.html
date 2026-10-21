@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Práctica: BEM</title>
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+  .contenedor,
+.contenedor-padre,
+.contenedor-scroll,
+.contenedor-zindex {
+  border: 2px solid black;
+  margin: 20px 0;
+  padding: 10px;
+}
+
+.caja,
+.hijo-absolute,
+.boton-fixed,
+.elemento-sticky,
+.capa {
+  border: 1px solid red;
+  padding: 10px;
+}
+
+/* EJEMPLO 1: POSITION RELATIVE */
+.caja-relative {
+  position: relative;
+  top: 20px;
+  left: 30px;
+}
+
+/* EJEMPLO 2: POSITION ABSOLUTE */
+.contenedor-padre {
+  position: relative;
+  height: 100px;
+}
+.hijo-absolute {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+/* EJEMPLO 3: POSITION FIXED */
+.boton-fixed{
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+}
+
+/* EJEMPLO 4: POSITION STICKY */
+.contenedor-scroll{
+  height: 150px;
+  overflow-y: auto
+}
+.elemento-sticky {
+  position: sticky;
+  top: 0;
+}
+
+/* EJEMPLO 5: Z-INDEX  */
+.contenedor-zindex
+{
+  position: relative;
+  height: 100px;
+}
+.capa {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+}
+.capa-1 {
+  top: 20px;
+  left: 20px;
+  background-color: blue;
+  z-index: 1;
+}
+.capa-2{
+  top: 40px;
+  left: 40px;
+  background-color: red;
+  z-index: 2;
+}
+.capa-3 {
+  top: 60px;
+  left: 60px;
+  background-color: green;
+  z-index: 3;
+}
+
+  .card {
+  border: 2px solid #333;
+  padding: 20px;
+  margin-bottom: 20px;
+  max-width: 300px;
+}
+
+.card__title {
+  color: #333;
+  margin-bottom: 50px;
+}
+
+.card__price {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+.card__button {
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.card__badge {
+  background-color: red;
+  color: white;
+  padding: 3px 8px;
+  font-size: 12px;
+}
+
+/*Modificador*/
+.card--featured{
+  border-color: gold;
+  border-width: 3px;
+}
+.card__button--disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+
+  </style>
+</head>
+
+<body>
+  <!-- EJEMPLO 1: POSITION RELATIVE -->
+  <h2>1. Position Relative</h2>
+  <div class="contenedor">
+    <div class="caja">Normal</div>
+    <div class="caja caja-relative">Relative</div>
+    <div class="caja">Normal</div>
+  </div>
+
+  <!-- EJEMPLO 2: POSITION ABSOLUTE -->
+  <h2>2. Position Absolute</h2>
+  <div class="contenedor-padre">
+    <div class="hijo-absolute">Absolute</div>
+    <p>Contenido del padre</p>
+  </div>
+
+  <!-- EJEMPLO 3: POSITION FIXED -->
+  <h2>3. Position Fixed</h2>
+  <p>Scroll para ver el botón fixed →</p>
+  <button class="boton-fixed">Fixed</button>
+
+  <!-- EJEMPLO 4: POSITION STICKY -->
+  <h2>4. Position Sticky</h2>
+  <div class="contenedor-scroll">
+    <p>Contenido antes</p>
+    <div class="elemento-sticky">STICKY</div>
+    <p>Contenido después</p>
+    <p>Más contenido...</p>
+    <p>Más contenido...</p>
+    <p>Más contenido...</p>
+    <p>Más contenido...</p>
+    <p>Más contenido...</p>
+    <p>Más contenido...</p>
+    <p>Más contenido...</p>
+    <p>Más contenido...</p>
+    <p>Más contenido...</p>
+    <p>Más contenido...</p>
+  </div>
+
+  <!-- EJEMPLO 5: Z-INDEX -->
+  <h2>5. Z-Index</h2>
+  <div class="contenedor-zindex">
+    <div class="capa capa-1">z-index: 1</div>
+    <div class="capa capa-2">z-index: 2</div>
+    <div class="capa capa-3">z-index: 3</div>
+  </div>
+  
+  <h1>BEM: Block__Element--Modifier</h1>
+
+  <!-- EJEMPLO: TARJETA DE PRODUCTO -->
+  <div class="card">
+    <h2 class="card__title">Laptop Pro</h2>
+    <p class="card__price">$999</p>
+    <button class="card__button">Comprar</button>
+    <button class="card__button card__button--disabled">Sin Stock</button>
+  </div>
+
+  <!-- SEGUNDA TARJETA CON MODIFICADOR -->
+  <div class="card card--featured">
+    <h2 class="card__title">Laptop Ultra</h2>
+    <span class="card__badge">OFERTA</span>
+    <p class="card__price">$1299</p>
+    <button class="card__button">Comprar</button>
+  </div>
+
+  <!-- EJEMPLO DE ANIDACIÓN INCORRECTA -->
+  <p>❌ MAL: card__header__title</p>
+  <p>✅ BIEN: card__title</p>
+</body>
+
+</html>

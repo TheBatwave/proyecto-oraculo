@@ -14,9 +14,11 @@ body {
   color: rgb(20, 195, 180);
 }
 
-
 .sidebar {
   background-color: rgba(180, 185, 46, 0.2);
+}
+.logo {
+  text-align: center;
 }
 .menu {
   background-color: rgba(255, 165, 0, 0.5);
