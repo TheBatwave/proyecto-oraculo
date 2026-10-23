@@ -105,3 +105,22 @@ section {
   font-size: 20px;
   cursor: pointer;
 }
+
+/* 4. Ventana (Árbol) */
+.ventana
+{
+  background-color: var(--panel);
+  border: 1px solid var(--borde);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.ventana__titulo {
+  padding: 12px 6px;
+  border-bottom: 1px solid var(--borde);
+  color: var(--acento);
+  font-family: monospace;
+}
+.ventana__contenido {
+  padding: 16px;
+  color: var(--texto-secundario);
+}
