@@ -5,20 +5,33 @@
   font-family: sans-serif;
 }
 
+:root{
+  --fondo: #0a0e17;   /* El fondo de toda la página */
+  --panel: #131a2b;   /* Barra lateral,tarjetas, ventanas */
+  --borde: #26324a; /* Bordes paras las lineas finas de tarjetas y separadores */
+  --acento: #00f0ff;  /* Itemactivo, botones, lo importante */
+  --acento-2: #ff2a6d; /* Bordes de detalle, alertas, toques pequeños */
+  --texto: #d1f7ff; /* El texto principal */
+  --texto-secundario: #7f93a8; /* Descripciones y texto menos importante */
+}
+
 body {
-  background-color: rgb(50, 56, 56);
-  color: white;
+  background-color: var(--fondo);
+  color: var(--texto);
 }
 
-.titulo {
-  color: rgb(20, 195, 180);
-}
-
-.sidebar {
-  background-color: rgba(180, 185, 46, 0.2);
-}
 .logo {
   text-align: center;
+}
+.sidebar {
+  background-color: var(--panel);
+}
+
+
+/* Colores para identificarlos */
+/*
+.sidebar {
+  background-color: rgba(180, 185, 46, 0.2);
 }
 .menu {
   background-color: rgba(255, 165, 0, 0.5);
@@ -35,12 +48,13 @@ header {
 section {
   background-color: rgba(95, 158, 160, 0.3);
 }
+*/
 
 /* 1. Contenedor Principal */
 .app-layout {
   display: flex;
   min-height: 100vh;
-  background-color: #0b141a;
+  background-color: var(--fondo);
 }
 
 /* 2. Menú Lateral */
@@ -52,7 +66,7 @@ section {
 }
 
 .menu ul {
-  list-style: none;
+  list-style: none; /*? Quita las viñetas */
   margin-top: 20px;
 }
 
@@ -60,20 +74,16 @@ section {
   padding: 12px 25px;
   margin-bottom: 5px;
   border-radius: 8px;
+  color: var(--texto-secundario);         /*? Texto apagado*/
+  font-weight: bold;
+  cursor: pointer;
+  border-left: 3px solid transparent;     /* ? Reserva el espacio del boorde*/
 }
 
 .menu li.active {
-  background-color: #1c2b33;
-}
-
-.menu a {
-  color: #a0aec0;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.menu li.active a {
-  color: white;
+  background-color: var(--borde);
+  color: var(--acento);                   /*? Texto neon */
+  border-left: 3px solid var(--acento);
 }
 
 
@@ -89,8 +99,8 @@ section {
   padding:10px;
   margin: 8px;
   border: none;
-  background-color: rgba(255, 68, 0, 0.3);
-  color: white;
+  background-color: var(--acento-2);
+  color: var(--texto);
   font-weight: bold;
   font-size: 20px;
   cursor: pointer;
