@@ -269,107 +269,195 @@
             </progress>
           </li>
           <li>
-            <img src="/assets/icons/css3.svg" alt="" width="40" aria-hidden="true">
+            <img src="/assets/icons/javascript.svg" alt="" width="40" aria-hidden="true">
             <span>CSS3 & Diseño</span>
-            <progress value="60" max="100" aria-label="60% de dominio">
-              60%
+            <progress value="20" max="100" aria-label="20% de dominio">
+              20%
             </progress>
           </li>
         </ul>
       </section>
+
+      <!-- Blog Reciente -->
+      <section aria-labelledby="blog-titulo">
+        <h2 id="blog-titulo">Mi Blog de Aprendizaje</h2>
+        <p>
+          Comparto mi experiencia aprendiendo desarrollo web.
+        </p>
+
+        <!-- Artículo 1 -->
+        <article>
+          <time datetime="2026-10-24">24 Octubre 2026</time>
+          <h3>
+            <a href="/blog/mi-primer-mes.html">
+              Mi Primer Mes Aprendiendo HTML
+            </a>
+          </h3>
+          <p>
+            Refleziones sobre lo que aprendí en mi primer mes
+            estudiando desarrollo web.
+          </p>
+          <span>📖 5 minutos de lectura</span>
+        </article>
+
+        <!-- Artículo 2 -->
+        <article>
+          <time datetime="2026-10-24">24 Octubre 2026</time>
+          <h3>
+            <a href="/blog/recursos-utiles.html">
+              5 Recursos Gratuitos para Aprender HTML
+            </a>
+          </h3>
+          <p>
+            Los mejores recursos que encontré para estudiar
+            desarrollo web desde cero.
+          </p>
+          <span>📖 3 minutos de lectura</span>
+        </article>
+
+        <a href="/blog.html">
+          Ver todos los artículos →
+        </a>
+      </section>
+
+      <!-- Call to Action -->
+      <section aria-labelledby="cta-titulo">
+        <h2 id="cta-titulo">¿Te gustaría conectar?</h2>
+        <p>
+          Siempre estoy buscando aprender de otros desarrolladores,
+          compartir expericias y tal vez colaborar en proyectos
+          interesantes.
+        </p>
+
+        <div>
+          <h3>🚀 Proyectos de Prácticas</h3>
+          <p>¿Tienes una idea? Colaboremos y aprendamos juntos</p>
+          <a href="/contacto.html%¿#colaborar">Colaborar</a>
+        </div>
+
+        <div>
+          <h3>💬 Conectemos</h3>
+          <p>¿Eres principiante también? Aprendamos juntos</p>
+          <a href="/contacto.html#conectar">Conectar</a>
+        </div>
+
+        <div>
+          <h3>Recursos</h3>
+          <p>Compartamos recursos y tips de aprendizaje</p>
+          <a href="/contacto.html#recursos">Compartir</a>
+        </div>
+      </section>
+
     </main>
+
+
+    <!--
+    ========================================
+    FOOTER COMPLETO
+    ========================================
+    -->
+    <footer role="contentinfo">
+      <!-- Sobre mi Perfil Personal -->
+      <section aria-labelledby="footer-about">
+        <h2 id="footer-about">Mi Perfil Personal</h2>
+        <p>
+          Portafolio personal de Rafael Sandoval Chavarría.
+          Aprendiendo desarrollo web un día a la vez.
+        </p>
+
+        <!-- Newsletter -->
+        <form action="/newletter" method="POST">
+          <label for="newsletter-email">
+            Suscribete a mi newsletter
+          </label>
+          <input type="email" id="newsletter-email" name="email" placeholder="thegothamoon@gmail.com" aria-required="true">
+          <button type="submit">Suscribir</button>
+        </form>
+      </section>
+
+      <!-- Enalces del Footer -->
+      <nav aria-label="Enlaces del footer">
+        <ul>
+          <li><a href="/">Inicio</a></li>
+          <li><a href="/sobre-mi-perfil.html">Sobre mí</a></li>
+          <li><a href="/proyectos-perfil.html">Proyectos</a></li>
+          <li><a href="/blog-perfil.html">Blog</a></li>
+          <li><a href="/contacto-perfil.html">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <!-- Contacto -->
+      <section aria-labelledby="footer-contact">
+        <h2 id="footer-contact">Contacto</h2>
+        <address>
+          <dl>
+            <dt>Email:</dt>
+            <dd>
+              <a href="mailto:rafael@miperfilpersonal.com">
+                rafael@miperfilpersonal.com
+              </a>
+            </dd>
+
+            <dt>LinkedIn</dt>
+            <dd>
+              <a href="https://www.linkedin.com/in/rafael-sandoval-chavarría-2335a6331/" target="\_blank" rel="noopener">
+                /in/rafael-sandoval-chavarría-dev
+              </a>
+            </dd>
+
+            <dt>GitHub:</dt>
+            <dd>
+              <a href="https://github.com/TheBatwave" target="\_blank" rel="noopener">
+                @rafaelsandovalchavarria
+              </a>
+            </dd>
+
+            <dt>Ubicación:</dt>
+            <dd>Ciudad de México, México</dd>
+          </dl>
+        </address>
+      </section>
+
+      <!-- Redes Sociales -->
+      <section aria-labelledby="footer-social">
+        <h2 id="footer-social">Sígueme</h2>
+        <ul>
+          <li>
+            <a href="https://github.com/TheBatwave" target="\_blank" rel="noopener"
+              aria-label="GitHub de Rafael Sandoval Chavarría">
+              GitHub
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/rafael-sandoval-chavarría-2335a6331/" target="_blank" rel="noopener"
+            aria-label="LinkedIn de Rafael Sandoval Chavarría">
+              LinkedIn
+            </a>
+          </li>
+        </ul>
+      
+        <!-- Descargas -->
+        <a href="/assets/documents/cv-rafael-sandoval-chavarría.pdf" download>
+          📄 Descargar mi CV (PDF)
+        </a>
+      </section>
+
+      <!-- Footer Bottom -->
+      <div>
+        <p>&copy; 2026 Rafael Sandoval Chavarría - Mi Perfil Personal. Todos los derechos reservados.</p>
+
+        <nav aria-label="Enlaces legales">
+          <a href="/privacidad-perfil.html">Privacidad</a>
+          <a href="/terminos-perfil.html">Términos</a>
+          <a href="/accesibilidad-perfil.html">Accesibilidad</a>
+        </nav>
+
+        <p>
+          Diseñando y Desarrollando con 🦇 por Rafael Sandoval Chavarría
+        </p>
+      </div>
+    </footer>
 
   </body>
   </html>
 </div>
-<!--
-        <li>
-          <img src="/assets/icons/css3.svg" alt="" width="40" height="40" aria-hidden="true">
-          <span>CSS3 & Diseño</span>
-          <progress value="60" max="100" aria-label="60% de dominio">
-            60%
-          </progress>
-        </li>
-        <li>
-          <img src="/assets/icons/javascript.svg" alt="" width="40" height="40" aria-hidden="true">
-          <span>JavaScript (Comenzando)</span>
-          <progress value="20" max="100" aria-label="20% de dominio">
-            20%
-          </progress>
-        </li>
-      </ul>
-    </section>
-
-    <!-- Blog Reciente --
-    <section aria-labelledby="blog-titulo">
-      <h2 id="blog-titulo">Mi Blog de Aprendizaje</h2>
-      <p>
-        Comparto mi experiencia aprendiendo desarrollo web.
-      </p>
-
-      <!-- Artículo 1 --
-      <article>
-        <time datetime="2025-01-15">15 Enero 2025</time>
-        <h3>
-          <a href="/blog/mi-primer-mes.html">
-            Mi Primer Mes Aprendiendo HTML
-          </a>
-        </h3>
-        <p>
-          Reflexiones sobre lo que aprendí en mi primer mes
-          estudiando desarrollo web.
-        </p>
-        <span>📖 5 min de lectura</span>
-      </article>
-
-      <!-- Artículo 2 --
-      <article>
-        <time datetime="2025-01-08">8 Enero 2025</time>
-        <h3>
-          <a href="/blog/recursos-utiles.html">
-            5 Recursos Gratuitos para Aprender HTML
-          </a>
-        </h3>
-        <p>
-          Los mejores recursos que encontré para estudiar
-          desarrollo web desde cero.
-        </p>
-        <span>📖 3 min de lectura</span>
-      </article>
-
-      <a href="/blog.html">
-        Ver todos los artículos →
-      </a>
-    </section>
-
-    <!-- Call to Action --
-    <section aria-labelledby="cta-titulo">
-      <h2 id="cta-titulo">¿Te gustaría conectar?</h2>
-      <p>
-        Siempre estoy buscando aprender de otros desarrolladores,
-        compartir experiencias y tal vez colaborar en proyectos
-        interesantes.
-      </p>
-
-      <div>
-        <h3>🚀 Proyectos de Práctica</h3>
-        <p>¿Tienes una idea? Colaboremos y aprendamos juntos</p>
-        <a href="/contacto.html#colaborar">Colaborar</a>
-      </div>
-
-      <div>
-        <h3>💬 Conectemos</h3>
-        <p>¿Eres principiante también? Aprendamos juntos</p>
-        <a href="/contacto.html#conectar">Conectar</a>
-      </div>
-
-      <div>
-        <h3>📚 Recursos</h3>
-        <p>Compartamos recursos y tips de aprendizaje</p>
-        <a href="/contacto.html#recursos">Compartir</a>
-      </div>
-    </section>
-
-  </main>
-
--->
