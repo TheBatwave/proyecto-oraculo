@@ -41,7 +41,14 @@
     <link rel="icon" type="image/png" sizes="512x512" href="/assets/icons/batwave-simbolo-androi-chrome-512x512.png">
     <link rel="manifest" href="/site.webmanifest"> <!-- ? No se bien que hace esta -->
 
-    <link rel="stylesheet" href="/">
+
+    <!-- Google Fonts - NUEVO en Módulo 2 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="/style/perfil.css">
 
   </head>
   <body>
@@ -50,7 +57,7 @@
             HEADER PRINCIPAL
     ========================================
     -->
-    <header role="header">
+    <header class="header">
       <!-- Logo y Marca Personal -->
       
       <a href="/" aria-label="Mi Perfil Personal - Inicio"> <!-- ? "/" apunta a la raíz del dominio-->
@@ -71,10 +78,10 @@
         <nav class="nav" aria-label="Navegación principal">
           <ul class="nav__list">
             <li class="nav__item">
-              <a href="#inicio" aria-current="page">Inicio</a> <!-- page =  El enlace lleva a la pagina actual-->
+              <a href="#inicio" class="nav__link nav__link--active" aria-current="page">Inicio</a> <!-- page =  El enlace lleva a la pagina actual-->
             </li>
             <li class="nav__item">
-              <a href="#sobre-mi" class="nav__link nav__link--active">Sobre mí</a>
+              <a href="#sobre-mi" class="nav__link">Sobre mí</a>
             </li>
             <li class="nav__item">
               <a href="#proyectos" class="nav__link">Proyectos</a>
@@ -91,20 +98,19 @@
           </ul>
         </nav>
       </div>
-    </header>
-
-
+      
       <div class="header-actions">
         <a href="/assets/documents/cv-rafael-sandoval-chavarría.pdf" download aria-label="Descargar CV en PDF">
           📄 CV
         </a>
-
+  
         <!-- Selector de idioma -->
         <select aria-label="Seleccionar idioma">
           <option value="es" selected>ES</option>
           <option value="en">EN</option>
         </select>
       </div>
+    </header>
     
     <!-- 
     ========================================
@@ -116,36 +122,36 @@
       <section class="hero" id="inicio">
         <div class="hero__container">
           <h2 class="hero__title">¡Hola! Soy Rafael Sandoval Chavarría</h2>
-          <p class="hero__subtitle"><strong>Desarrollador Web en Formación</strong></p>
-          <p class="hero_description">
+          <p class="hero__subtitle">Desarrollador Web en Formación</p>
+          <p class="hero__description">
             Estoy aprendiendo HTML y CSS para crear sitios web geniales a 
             la vista y funcionales. Mi pasión: transformar ideas en experiencias
             web íncreibles.
           </p>
         </div>
 
+        <!-- Estadísticas Rápidas -->
+        <div class="hero__stats">
+          <div class="stat">
+            <data class="stat__number" value="6">6+</data>
+            <span class="stat__label">Meses aprendiendo</span>
+          </div>
+
+          <div class="stat">
+            <data class="stat__number" value="3">3+</data>
+            <span class="stat__label">Proyectos completados</span>
+          </div>
+
+          <div class="stat">
+            <data class="stat__number" value="5">5+</data>
+            <span class="stat__label">Tecnologías</span>
+          </div>
+        </div>
+
         <!-- Call to Action -->
         <div class="hero__actions">
           <a href="#proyectos" class="button button--primary">Ver mis Proyectos</a>
           <a href="#contacto" class="button button--secondary">Contáctame</a>
-        </div>
-
-        <!-- Estadísticas Rápidas -->
-        <div class="hero__stats">
-          <div class="stat">
-            <data class="stat__number" value="6">6+</data> <!--? data -->
-            <span class="stat__label">Meses aprendiendo</span>            
-          </div>
-  
-          <div>
-            <data class="stat__number" value="3">3+</data>
-            <span class="stat__label">Proyectos Completados</span>
-          </div>
-  
-          <div>
-            <data class="stat_number" value="5">5+</data>
-            <span class="stat__label">Tecnologías</span>
-          </div>
         </div>
 
         <!-- Imagen de Perfil -->
@@ -190,22 +196,22 @@
             <h3 class="values__title">Mis Valores</h3>
             <ul class="values__list">
               <li class="values__item">
-                <span class="values_icon">🎯</span>
+                <span class="values__icon">🎯</span>
                 <strong>Dedicación</strong>
                 <span>Comprometido con mi aprendizaje diario</span>
               </li>
               <li class="values__item">
-                <span class="values_icon">📚</span>
+                <span class="values__icon">📚</span>
                 <strong>Curiosidad</strong>
                 <span>Siempre explorando nuevas tecnologías</span>
               </li>
               <li class="values__item">
-                <span class="values_icon">🤝</span>
+                <span class="values__icon">🤝</span>
                 <strong>Comunidad</strong>
                 <span>Aprendiendo y compartiendo con otros</span>
               </li>
               <li class="values__item">
-                <span class="values_icon">💡</span>
+                <span class="values__icon">💡</span>
                 <strong>Dedicación</strong>
                 <span>Buscando soluciones innovadores</span>
               </li>
@@ -349,7 +355,7 @@
                 <img src="/assets/icons/html5.svg" alt="" class="skill__icon" width="40" height="40" aria-hidden="true">
                 <span class="skill__name">HTML5 & Semántica</span>
               </div>
-              <div class="skill__meter">
+              <div class="skill__bar">
                 <progress class="skill__progress skill__progress--html" value="75" max="100" aria-label="75% de dominio">
                   75%
                 </progress>
@@ -363,7 +369,7 @@
                 <img src="/assets/icons/css3.svg" alt="" class="skill__icon" width="40" height="40" aria-hidden="true">
                 <span class="skill__name">CSS3 & Diseño</span>
               </div>
-              <div class="skill__meter">
+              <div class="skill__bar">
                 <progress class="skill__progress skill__progress--css" value="60" max="100" aria-label="60% de dominio">
                   60%
                 </progress>
@@ -377,7 +383,7 @@
                 <img src="/assets/icons/javascript.svg" alt="" class="skill__icon" width="40" height="40" aria-hidden="true">
                 <span class="skill__name">JavaScript (Comenzando)</span>
               </div>
-              <div class="skill__meter">
+              <div class="skill__bar">
                 <progress class="skill__progress skill__progress--js" value="20" max="100" aria-label="20% de dominio">
                   20%
                 </progress>
@@ -522,6 +528,6 @@
     </footer>
   </body>
 
-  
+
   </html>
 </div>
