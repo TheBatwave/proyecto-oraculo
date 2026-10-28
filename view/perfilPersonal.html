@@ -41,7 +41,7 @@
     <link rel="icon" type="image/png" sizes="512x512" href="/assets/icons/batwave-simbolo-androi-chrome-512x512.png">
     <link rel="manifest" href="/site.webmanifest"> <!-- ? No se bien que hace esta -->
 
-    <link rel="stylesheet" href="/style/perfil.css">
+    <link rel="stylesheet" href="/">
 
   </head>
   <body>
@@ -50,29 +50,49 @@
             HEADER PRINCIPAL
     ========================================
     -->
-    <header role="banner">
+    <header role="header">
       <!-- Logo y Marca Personal -->
-      <div class="brand"> 
-        <a href="/" aria-label="Mi Perfil Personal - Inicio"> <!-- ? "/" apunta a la raíz del dominio-->
-          <img  src="/assets/icons/perfil-logo.png" 
-                alt="Mi Perfil Personal"
-                width="48" height="48">
-                <!-- ? alt hace que si no carga la foto, aparezca ese texto descriptivo -->
-          <span>Mi Perfil Personal</span>
-        </a>
-      </div>
+      
+      <a href="/" aria-label="Mi Perfil Personal - Inicio"> <!-- ? "/" apunta a la raíz del dominio-->
+        <img  src="/assets/icons/perfil-logo.png" 
+              alt="Mi Perfil Personal"
+              width="48" height="48">
+              <!-- ? alt hace que si no carga la foto, aparezca ese texto descriptivo -->
+        <span>Mi Perfil Personal</span>
+      </a>
 
-      <!-- Navegación Principal -->
-      <nav aria-label="Navegación principal">
-        <ul>
-          <li><a href="/" aria-current="page">Inicio</a></li> <!-- page =  El enlace lleva a la pagina actual-->
-          <li><a href="/sobre-mi.html">Sobre mí</a></li>
-          <li><a href="/habilidades.html">Habilidades</a></li>
-          <li><a href="/proyectos.html">Proyectos</a></li>
-          <li><a href="/Blog.html">Blog</a></li>
-          <li><a href="/Contacto.html">Contacto</a></li>
-        </ul>
-      </nav>
+      <div class="header__container"> 
+        <div class="header__brand">
+          <h1 class="header__name">Rafael Sandoval Chavarría</h1>
+          <p class="header__tagline">Desarrollador Web en Formación</p>
+        </div>
+
+        <!-- Navegación Principal -->
+        <nav class="nav" aria-label="Navegación principal">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#inicio" aria-current="page">Inicio</a> <!-- page =  El enlace lleva a la pagina actual-->
+            </li>
+            <li class="nav__item">
+              <a href="#sobre-mi" class="nav__link nav__link--active">Sobre mí</a>
+            </li>
+            <li class="nav__item">
+              <a href="#proyectos" class="nav__link">Proyectos</a>
+            </li>
+            <li class="nav__item" >
+              <a href="#habilidades" class="nav__link">Habilidades</a>
+            </li>
+            <li class="nav__item">
+              <a href="#blog" class="nav__link">Blog</a>
+            </li>
+            <li class="nav__item">
+              <a href="#contacto" class="nav__link">Contacto</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
 
       <div class="header-actions">
         <a href="/assets/documents/cv-rafael-sandoval-chavarría.pdf" download aria-label="Descargar CV en PDF">
@@ -85,45 +105,46 @@
           <option value="en">EN</option>
         </select>
       </div>
-    </header>
     
     <!-- 
     ========================================
-            HEADER PRINCIPAL
+            MAIN PRINCIPAL
     ========================================
     -->
-    <main id="contenido-principal" role="main"> <!--? -->
+    <main class="main" role="main"> <!--? -->
       <!-- Hero Section -->
-      <section aria-labelledby="hero-titulo"> <!--? -->
-        <h1 id="hero-titulo">¡Hola! Soy Rafael Sandoval Chavarría</h1>
-        <p><strong>Desarrollador Web en Formación</strong></p>
-        <p>
-          Estoy aprendiendo HTML y CSS para crear sitios web geniales a 
-          la vista y funcionales. Mi pasión: transformar ideas en experiencias
-          web íncreibles.
-        </p>
+      <section class="hero" id="inicio">
+        <div class="hero__container">
+          <h2 class="hero__title">¡Hola! Soy Rafael Sandoval Chavarría</h2>
+          <p class="hero__subtitle"><strong>Desarrollador Web en Formación</strong></p>
+          <p class="hero_description">
+            Estoy aprendiendo HTML y CSS para crear sitios web geniales a 
+            la vista y funcionales. Mi pasión: transformar ideas en experiencias
+            web íncreibles.
+          </p>
+        </div>
 
         <!-- Call to Action -->
-        <div class="hero-actions">
-          <a href="#proyecto-destacados">Ver mis Proyectos</a>
-          <a href="/contacto.html">Contáctame</a>
+        <div class="hero__actions">
+          <a href="#proyectos" class="button button--primary">Ver mis Proyectos</a>
+          <a href="#contacto" class="button button--secondary">Contáctame</a>
         </div>
 
         <!-- Estadísticas Rápidas -->
-        <div class="hero-stats">
-          <div>
-            <data value="6">6+</data> <!--? data -->
-            <span>Meses aprendiendo</span>            
+        <div class="hero__stats">
+          <div class="stat">
+            <data class="stat__number" value="6">6+</data> <!--? data -->
+            <span class="stat__label">Meses aprendiendo</span>            
           </div>
   
           <div>
-            <data value="3">3+</data>
-            <span>Proyectos Completados</span>
+            <data class="stat__number" value="3">3+</data>
+            <span class="stat__label">Proyectos Completados</span>
           </div>
   
           <div>
-            <data value="5">5+</data>
-            <span>Tecnologías</span>
+            <data class="stat_number" value="5">5+</data>
+            <span class="stat__label">Tecnologías</span>
           </div>
         </div>
 
@@ -133,153 +154,253 @@
             <source media="(min-width: 768px)" srcset="/assets/img/perfil/rafael-desktop.webp" type="img/webp">
             <source media="(min-width: 768px)" srcset="/assets/img/perfil/rafael-desktop.jpg">
             <img src="/assets/img/perfil/rafael-mobile.png" alt="Rafael Sandoval Chavarría - Desarrollador Web en Formación"
-                  width="500" height="500" loading="eager"> <!--? loading-->
+                  width="200" height="200" loading="eager"> <!--? loading-->
           </picture>
           <figcaption>Rafael Sandoval Chavarría en su espacio de trabajo</figcaption> <!-- ? Pie de página-->
         </figure>
+
       </section>
     
       <!-- Sección Sobre Mí -->
-      <section aria-labelledby="about-titulo"> <!--? aria-labelledby -->
-        <h2 id="about-titulo">Mi Viaje en el Desarrollo Web</h2>
-        <p>
-          Soy <strong>desarrollador web en formación</strong>,
-          actualmente aprendiendo HTML y CSS para crear sitios
-          web íncreibles y funcionales.
-        </p>
+      <section class="about" id="sobre-mi" aria-labelledby="about-titulo"> <!--? aria-labelledby -->
+        <div class="about__container">
+          <h2 class="about__title">Mi viaje en el Desarrollo Web</h2>
 
-        <p>
-          Me apasiona la tecnología y el diseño. Cada día descubro
-          nuevas formas de mejorar mis habilidades y crear 
-          <em>mejores experiencias web</em>.
-        </p>
-
-        <blockquote> <!--? blockquote -->
-          <p>
-            "¿Por qué caemos?, para aprender a levantarnos."
+          <p class="about__intro">
+            Soy <strong>desarrollador web en formación</strong>,
+            actualmente aprendiendo HTML y CSS para crear sitios
+            web íncreibles y funcionales.
           </p>
-          <cite>- Mi filosofía de aprendizaje</cite>
-        </blockquote>
+          
+          <p class="about__text">
+            Me apasiona la tecnología y el diseño. Cada día descubro
+            nuevas formas de mejorar mis habilidades y crear 
+            <em>mejores experiencias web</em>.
+          </p>
 
-        <!-- Valores Personales -->
-        <h3>Mis Valores</h3>
-        <dl>
-          <dt>🎯 Dedicación</dt>
-          <dd>Comprometido con mi aprendizaje diario</dd>
-  
-          <dt>📚 Curiosidad</dt>
-          <dd>Siempre explorando nuevas tecnologías</dd>
-  
-          <dt>🤝 Comunidad</dt>
-          <dd>Aprendiendo y compartiendo con otros</dd>
-  
-          <dt>💡 Creatividad</dt>
-          <dd>Buscando soluciones innovadores</dd>
-        </dl>
-  
-        <a href="/sobre-mi.html">
+          <blockquote class="quote"> <!--? blockquote -->
+            <p class="quote__text">
+              "¿Por qué caemos?, para aprender a levantarnos."
+            </p>
+            <cite class="quote__author">- Mi filosofía de aprendizaje</cite>
+          </blockquote>
+
+          <!-- Valores Personales -->
+          <div class="values">
+            <h3 class="values__title">Mis Valores</h3>
+            <ul class="values__list">
+              <li class="values__item">
+                <span class="values_icon">🎯</span>
+                <strong>Dedicación</strong>
+                <span>Comprometido con mi aprendizaje diario</span>
+              </li>
+              <li class="values__item">
+                <span class="values_icon">📚</span>
+                <strong>Curiosidad</strong>
+                <span>Siempre explorando nuevas tecnologías</span>
+              </li>
+              <li class="values__item">
+                <span class="values_icon">🤝</span>
+                <strong>Comunidad</strong>
+                <span>Aprendiendo y compartiendo con otros</span>
+              </li>
+              <li class="values__item">
+                <span class="values_icon">💡</span>
+                <strong>Dedicación</strong>
+                <span>Buscando soluciones innovadores</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <a href="/sobre-mi.html"> <!-- ! Tal vez lo quite-->
           Conoce más sobre mí →
         </a>
       </section>
 
-      <!-- Proyectos Destacados -->
-      <section id="proyectos-destacados" aria-labelledby="projects-titulo">
-        <h2 id="projects-titulo">Mis Proyectos de Práctica</h2>
-        <p>
-          Cada proyecto representa mi progreso aprendiendo desarrollo web.
-          Desde páginas simples hasta este portafolio completo.
-        </p>
-
-        <!-- Proyecto 1 -->
-        <article>
-          <figure>
-            <picture>
-              <source type="image/webp" srcset="/assets/img/proyectos/ejemplo-primer-sitio-web.jpg"> <!-- Aqui seria: -web.webp, pero como no se veia, lo cambie a jpg-->
-              <img src="/assets/img/proyectos/ejemplo-primer-sitio-web.jpg" alt="Captura de mi primer sitio web con HTML y CSS"
-                    width="800" height="600" loading="lazy">
-            </picture>
-            <figcaption>Mi Primer Sitio Web - HTML y CSS básico</figcaption>
-          </figure>
-
-          <h3>Mi Primer Sitio Web</h3>
-          <p>
-            Mi primer proyecto completo usado HTML y CSS. Una página
-            simple pero bien estructurada donde apliqué los conceptos
-            básicos aprendidos.
+      <!-- Proyectos -->
+      <section class="projects" id="proyectos">
+        <div class="projects__container">
+          <h2 class="projects__title">Mis Proyectos de Práctica</h2>
+          <p class="projects__description">
+            Cada proyecto representa mi progreso aprendiendo desarrollo web.
+            Desde páginas simples hasta este portafolio completo.
           </p>
 
-          <h4>Lo que aprendí:</h4>
-          <ul>
-            <li>Estructura semántica de HTML</li>
-            <li>Box Model y layout básico</li>
-            <li>Estilos CSS fundamentales</li>
-            <li>Principios básicos de accesibilidad</li>
-            <li>Introducción al diseño responsivo</li>
-            <li></li>
-          </ul>
+          <div class="projects__grid">
+            <!-- Proyecto 1 -->
+            <article class="project">
+              <h3 class="project__title">Mi Primer Sitio Web</h3>
+              <p class="project__description">
+                Mi primer proyecto completo usado HTML y CSS. Una página
+                simple pero bien estructurada donde apliqué los conceptos
+                básicos aprendidos.
+              </p>
 
-          <h4>Tecnologías usadas:</h4>
-          <ul>
-            <li>HTML5</li>
-            <li>CSS3</li>
-          </ul>
+              <figure>
+                <picture class="project__picture">
+                  <source type="image/webp" srcset="/assets/img/proyectos/ejemplo-primer-sitio-web.jpg"> <!-- Aqui seria: -web.webp, pero como no se veia, lo cambie a jpg-->
+                  <img src="/assets/img/proyectos/ejemplo-primer-sitio-web.jpg" alt="Captura de mi primer sitio web con HTML y CSS"
+                        width="350" height="200" loading="lazy">
+                </picture>
+                <figcaption>Mi Primer Sitio Web - HTML y CSS básico</figcaption>
+              </figure>
+    
+              <h4 class="project__subtitle">Lo que aprendí:</h4>
+              <ul class="project_learnings">
+                <li>Estructura semántica de HTML</li>
+                <li>Box Model y layout básico</li>
+                <li>Estilos CSS fundamentales</li>
+                <li>Principios básicos de accesibilidad</li>
+                <li>Introducción al diseño responsivo</li>
+              </ul>
+              
 
-          <h4>Logros del proyecto:</h4>
-          <div>
-            <data value="100">100%</data> HTML válido
+              <h4 class="project__subtitle">Tecnologías usadas:</h4>
+              <ul class="project__technologies">
+                <li class="tag">HTML5</li>
+                <li class="tag">CSS3</li>
+              </ul>
+              
+              <div class="project__links">
+                <a href="#" class="project__link">Ver proyecto</a>
+                <a href="#" class="project__link">Ver código</a>
+              </div>
+            </article>
+
+            <!-- Proyecto Portafolio -->
+            <article class="project project--featured">
+              <span class="project__badge">Destacado</span>
+              <h3 class="project__title">Portafolio Personal</h3>
+              <p class="project__description">
+                Este mismo portfolio que estás viendo. Mi proyecto más completo
+                donde aplico todo lo aprendido en HTML y CSS.
+              </p>
+    
+              <h4 class="project__subtitle">Características:</h4>
+              <ul class="project_learnings">
+                <li>HTML semántico y accesible</li>
+                <li>CSS moderno y organizado</li>
+                <li>Diseño responsivo</li>
+                <li>Metodología BEM</li>
+                <li>Optimización de rendimiento</li>
+              </ul>
+              
+
+              <h4 class="project__subtitle">Tecnologías usadas:</h4>
+              <ul class="project__technologies">
+                <li class="tag">HTML5</li>
+                <li class="tag">CSS3</li>
+                <li class="tag">BEM</li>
+              </ul>
+              
+              <div class="project__links">
+                <a href="#" class="project__link">Ver proyecto</a>
+                <a href="#" class="project__link">Ver código</a>
+              </div>
+            </article>
+
+            <!-- Proyecto Blog -->
+            <article class="project project--featured">
+              <h3 class="project__title">Página de Blog</h3>
+              <p class="project__description">
+                Un blog simple donde practico la tipografía web y la
+              organización de contenido. Enfocado en la legibilidad y la
+              experiencia de lectura.
+              </p>
+    
+              <h4 class="project__subtitle">Enfoque:</h4>
+                <ul class="project__learnings">
+                  <li>Tipografía legible</li>
+                  <li>Espaciado correcto</li>
+                  <li>Jerarquía visual</li>
+                  <li>Colores accesibles</li>
+                  <li>Layout de contenido</li>
+                </ul>
+              
+
+              <h4 class="project__subtitle">Tecnologías usadas:</h4>
+              <ul class="project__technologies">
+                <li class="tag">HTML5</li>
+                <li class="tag">CSS3</li>
+                <li class="tag">Tipografía</li>
+              </ul>
+              
+              <div class="project__links">
+                <a href="#" class="project__link">Ver proyecto</a>
+                <a href="#" class="project__link">Ver código</a>
+              </div>
+            </article>
           </div>
-          <div>
-            <data value="0">0</data> Errores de accesibilidad
-          </div>
-          <div>
-            <data value="95">95</data> Score en Lighthouse
-          </div>
-
-          <a href="/proyectos/primer-sitio.html">
-            Ver detalles del proyecto
-          </a>
-          <a href="https//demo.miprimer-sitio.com" target="\_blank" rel="noopener">
-            Ver demo ↗
-          </a>
-        </article>
-
-        <a href="/proyectos-perfil.html">
-          Ver detalles del proyecto
-        </a>
+        </div>
       </section>
 
       <!-- Habilidades Técnicas -->
-      <section aria-labelledby="skills-titulo">
-        <h2 id="skills-titulo">Mis Habilidades</h2>
+      <section class="skills" id="habilidades" aria-labelledby="skills-title">
+        <div class="skills__container">
+          <h2 class="skills__title" id="skills-title">Mis Habilidades</h2>
+          <h3 class="skills__subtitle">Tecnologías que estoy aprendiendo</h3>
 
-        <h3>Tecnologías que estoy aprendiendo</h3>
-        <ul>
-          <li>
-            <img src="/assets/icons/html5.svg" alt="" height="40" aria-hidden="true">
-            <span>HTML5 & Sémantica</span>
-            <progress value="75" max="100" aria-label="75% de dominio">
-              75%
-            </progress>
-          </li>
-          <li>
-            <img src="/assets/icons/css3.svg" alt="" width="40" aria-hidden="true">
-            <span>CSS3 & Diseño</span>
-            <progress value="60" max="100" aria-label="60% de dominio">
-              60%
-            </progress>
-          </li>
-          <li>
-            <img src="/assets/icons/javascript.svg" alt="" width="40" aria-hidden="true">
-            <span>CSS3 & Diseño</span>
-            <progress value="20" max="100" aria-label="20% de dominio">
-              20%
-            </progress>
-          </li>
-        </ul>
+          <ul class="skills__list">
+            
+            <!-- Habilidad 1 -->
+            <li class="skill">
+              <div class="skill__header">
+                <img src="/assets/icons/html5.svg" alt="" class="skill__icon" width="40" height="40" aria-hidden="true">
+                <span class="skill__name">HTML5 & Semántica</span>
+              </div>
+              <div class="skill__meter">
+                <progress class="skill__progress skill__progress--html" value="75" max="100" aria-label="75% de dominio">
+                  75%
+                </progress>
+                <span class="skill__percentage">75%</span>
+              </div>
+            </li>
+
+            <!-- Habilidad 2 -->
+            <li class="skill">
+              <div class="skill__header">
+                <img src="/assets/icons/css3.svg" alt="" class="skill__icon" width="40" height="40" aria-hidden="true">
+                <span class="skill__name">CSS3 & Diseño</span>
+              </div>
+              <div class="skill__meter">
+                <progress class="skill__progress skill__progress--css" value="60" max="100" aria-label="60% de dominio">
+                  60%
+                </progress>
+                <span class="skill__percentage">60%</span>
+              </div>
+            </li>
+
+            <!-- Habilidad 3 -->
+            <li class="skill">
+              <div class="skill__header">
+                <img src="/assets/icons/javascript.svg" alt="" class="skill__icon" width="40" height="40" aria-hidden="true">
+                <span class="skill__name">JavaScript (Comenzando)</span>
+              </div>
+              <div class="skill__meter">
+                <progress class="skill__progress skill__progress--js" value="20" max="100" aria-label="20% de dominio">
+                  20%
+                </progress>
+                <span class="skill__percentage">20%</span>
+              </div>
+            </li>
+          </ul>
+
+          <div class="learning">
+            <h3 class="learning__title">Actualmente aprendiendo:</h3>
+            <ul class="learning__list">
+              <li class="learning__item">Flexbox y Grid Layout</li>
+              <li class="learning__item">Animaciones CSS</li>
+              <li class="learning__item">Diseño Responsive</li>
+              <li class="learning__item">Accesibilidad Web</li>
+              <li class="learning__item">Mejores prácticas</li>
+            </ul>
+          </div>
+        </div>
       </section>
 
       <!-- Blog Reciente -->
-      <section aria-labelledby="blog-titulo">
+      <section class="blogs" id="blog">
         <h2 id="blog-titulo">Mi Blog de Aprendizaje</h2>
         <p>
           Comparto mi experiencia aprendiendo desarrollo web.
@@ -320,31 +441,42 @@
         </a>
       </section>
 
-      <!-- Call to Action -->
-      <section aria-labelledby="cta-titulo">
-        <h2 id="cta-titulo">¿Te gustaría conectar?</h2>
-        <p>
-          Siempre estoy buscando aprender de otros desarrolladores,
-          compartir expericias y tal vez colaborar en proyectos
-          interesantes.
-        </p>
+      <!-- Contacto -->
+      <section class="contact" id="contacto">
+        <div class="contact__container">
+          <h2 class="contact__title">¿Te gustaría conectar?</h2>
+          <p class="contact__description">
+            Siempre estoy buscando aprender de otros desarrolladores,
+            compartir expericias y tal vez colaborar en proyectos
+            interesantes.
+          </p>
+  
+          <div class="contact__methods">
+            <div class="contact__method">
+              <h3 class="contact__method-title">📧 Email</h3>
+              <a href="mailto:rafael@ejemplo.com" class="contact__link">
+                rafael@ejemplo.com
+              </a>
+            </div>
 
-        <div>
-          <h3>🚀 Proyectos de Prácticas</h3>
-          <p>¿Tienes una idea? Colaboremos y aprendamos juntos</p>
-          <a href="/contacto.html%¿#colaborar">Colaborar</a>
-        </div>
+            <div class="contact__method">
+              <h3 class="contact__method-title">💻 GitHub</h3>
+              <a href="https://github.com/TheBatwave" class="contact__link">
+                @thebatwave
+              </a>
+            </div>
 
-        <div>
-          <h3>💬 Conectemos</h3>
-          <p>¿Eres principiante también? Aprendamos juntos</p>
-          <a href="/contacto.html#conectar">Conectar</a>
-        </div>
-
-        <div>
-          <h3>Recursos</h3>
-          <p>Compartamos recursos y tips de aprendizaje</p>
-          <a href="/contacto.html#recursos">Compartir</a>
+            <div class="contact__method">
+              <h3 class="contact__method-title">💼 LinkedIn</h3>
+              <a href="https://www.linkedin.com/in/rafael-sandoval-chavarría-2335a6331/" class="contact__link">
+                /in/diego-degranda
+              </a>
+            </div>
+          </div>
+          
+          <a href="/assets/documents/cv-rafael-sandoval-chavarría.pdf" download>
+            📄 Descargar mi CV (PDF)
+          </a>
         </div>
       </section>
 
@@ -353,111 +485,43 @@
 
     <!--
     ========================================
-    FOOTER COMPLETO
+              FOOTER COMPLETO
     ========================================
     -->
-    <footer role="contentinfo">
-      <!-- Sobre mi Perfil Personal -->
-      <section aria-labelledby="footer-about">
-        <h2 id="footer-about">Mi Perfil Personal</h2>
-        <p>
-          Portafolio personal de Rafael Sandoval Chavarría.
-          Aprendiendo desarrollo web un día a la vez.
+    <footer class="footer">
+      <div class="footer__container">
+        <nav class="footer__nav">
+          <a href="#inicio" class="footer__link">Inicio</a>
+          <a href="#sobre-mi" class="footer__link">Sobre mí</a>
+          <a href="#proyectos" class="footer__link">Proyectos</a>
+          <a href="#habilidades" class="footer__link">Habilidades</a>
+          <a href="#blog" class="footer__link">Blog</a>
+          <a href="#contacto" class="footer__link">Contacto</a>
+        </nav>
+        
+        <p class="footer__copyright">
+          &copy; 2026 Rafael Sandoval Chavarría - Mi Perfil Personal. 
+          Todos los derechos reservados.
         </p>
 
-        <!-- Newsletter -->
-        <form action="/newletter" method="POST">
-          <label for="newsletter-email">
-            Suscribete a mi newsletter
-          </label>
-          <input type="email" id="newsletter-email" name="email" placeholder="thegothamoon@gmail.com" aria-required="true">
-          <button type="submit">Suscribir</button>
-        </form>
-      </section>
-
-      <!-- Enalces del Footer -->
-      <nav aria-label="Enlaces del footer">
-        <ul>
-          <li><a href="/">Inicio</a></li>
-          <li><a href="/sobre-mi-perfil.html">Sobre mí</a></li>
-          <li><a href="/proyectos-perfil.html">Proyectos</a></li>
-          <li><a href="/blog-perfil.html">Blog</a></li>
-          <li><a href="/contacto-perfil.html">Contacto</a></li>
-        </ul>
-      </nav>
-
-      <!-- Contacto -->
-      <section aria-labelledby="footer-contact">
-        <h2 id="footer-contact">Contacto</h2>
-        <address>
-          <dl>
-            <dt>Email:</dt>
-            <dd>
-              <a href="mailto:rafael@miperfilpersonal.com">
-                rafael@miperfilpersonal.com
-              </a>
-            </dd>
-
-            <dt>LinkedIn</dt>
-            <dd>
-              <a href="https://www.linkedin.com/in/rafael-sandoval-chavarría-2335a6331/" target="\_blank" rel="noopener">
-                /in/rafael-sandoval-chavarría-dev
-              </a>
-            </dd>
-
-            <dt>GitHub:</dt>
-            <dd>
-              <a href="https://github.com/TheBatwave" target="\_blank" rel="noopener">
-                @rafaelsandovalchavarria
-              </a>
-            </dd>
-
-            <dt>Ubicación:</dt>
-            <dd>Ciudad de México, México</dd>
-          </dl>
-        </address>
-      </section>
-
-      <!-- Redes Sociales -->
-      <section aria-labelledby="footer-social">
-        <h2 id="footer-social">Sígueme</h2>
-        <ul>
-          <li>
-            <a href="https://github.com/TheBatwave" target="\_blank" rel="noopener"
-              aria-label="GitHub de Rafael Sandoval Chavarría">
-              GitHub
-            </a>
-          </li>
-          <li>
-            <a href="https://www.linkedin.com/in/rafael-sandoval-chavarría-2335a6331/" target="_blank" rel="noopener"
-            aria-label="LinkedIn de Rafael Sandoval Chavarría">
-              LinkedIn
-            </a>
-          </li>
-        </ul>
-      
-        <!-- Descargas -->
-        <a href="/assets/documents/cv-rafael-sandoval-chavarría.pdf" download>
-          📄 Descargar mi CV (PDF)
-        </a>
-      </section>
-
-      <!-- Footer Bottom -->
-      <div>
-        <p>&copy; 2026 Rafael Sandoval Chavarría - Mi Perfil Personal. Todos los derechos reservados.</p>
-
-        <nav aria-label="Enlaces legales">
-          <a href="/privacidad-perfil.html">Privacidad</a>
-          <a href="/terminos-perfil.html">Términos</a>
-          <a href="/accesibilidad-perfil.html">Accesibilidad</a>
-        </nav>
-
+        <!-- Footer Bottom -->
+        <div>
+  
+          <nav aria-label="Enlaces legales">
+            <a href="/privacidad-perfil.html">Privacidad</a>
+            <a href="/terminos-perfil.html">Términos</a>
+            <a href="/accesibilidad-perfil.html">Accesibilidad</a>
+          </nav>
+          
+        </div>
+        
         <p>
           Diseñando y Desarrollando con 🦇 por Rafael Sandoval Chavarría
         </p>
       </div>
     </footer>
-
   </body>
+
+  
   </html>
 </div>
